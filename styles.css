@@ -1689,3 +1689,16 @@ body.dark-mode footer > p {
         padding: 6px 2px !important;
     }
 }
+
+/* Center the petition boxes in mobile view */
+@media (max-width: 700px) {
+    .signature-container {
+        align-items: center !important;   /* Center the boxes horizontally */
+        justify-content: flex-start !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .signature-box {
+        margin: 0 auto 10px auto !important; /* Center each box */
+    }
+}
