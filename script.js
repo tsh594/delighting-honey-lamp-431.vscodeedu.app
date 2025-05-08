@@ -35,7 +35,7 @@ function validateForm() {
 
     // Update signature count
     const signatureCount = signaturesList.children.length;
-    document.getElementById('signatureCountDisplay').textContent = `Signatures: ${signatureCount}`;
+    document.getElementById('signatureCountDisplay').textContent = `Signatures: ${signatureCount - 2}`;
 
     // Show popup with user's name
     showPopup(name);

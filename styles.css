@@ -881,6 +881,7 @@ body.dark-theme a:hover {
     max-width: 400px;
     margin: 20px auto;
     padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f4f4f4;
   }
@@ -1563,4 +1564,48 @@ body.dark-mode #contact form button:hover {
     font-size: 0.95rem;
     color: #6B7C93;
     margin-bottom: 8px;
+}
+
+/* Improved Contact Section for Light Mode - More Visible Color */
+#contact.section-box {
+    background: linear-gradient(135deg, #fffbe6 0%, #ffe082 100%);
+    border: 2px solid #ffb300;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(255, 179, 0, 0.10);
+    padding: 36px 28px;
+    margin: 32px auto;
+    max-width: 600px;
+    color: #4e3200;
+    transition: box-shadow 0.3s;
+}
+
+#contact.section-box:hover {
+    box-shadow: 0 8px 32px rgba(255, 179, 0, 0.18);
+}
+
+#contact .section-title {
+    color: #ff9800;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#contact p {
+    font-size: 1.08rem;
+    color: #4e3200;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#contact a {
+    color: #ff9800;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+#contact a:hover {
+    color: #ffb300;
+    text-decoration: none;
 }
