@@ -132,8 +132,8 @@ document.getElementById('reduceMotionButton').addEventListener('click', function
 
 // Navigation Toggle
 function toggleNav() {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('open');
+    var navbar = document.getElementById('navbar');
+    navbar.classList.toggle('active'); // Use 'active' instead of 'open'
 }
 
 // News Item Toggle

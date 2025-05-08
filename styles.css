@@ -675,21 +675,18 @@ body.dark-theme a:hover {
       flex-direction: column;
       display: none;
     }
-  
-    nav ul li {
-      margin: 0 15px;
-    }
-  
-    nav.active ul {
+    #navbar.active ul {
       display: flex;
     }
-  
     .navbar-toggle {
       display: block;
     }
   }
-  
-  /* Section Box Styles */
+  #navbar {
+    position: relative;
+}
+
+/* Section Box Styles */
   .section-box {
     padding: 20px;
     margin: 20px;
@@ -1090,7 +1087,7 @@ body.dark-theme a:hover {
   /* Basic layout for form and buttons */
   #sign-petition {
     width: 100%;
-    max-width: 600px;         /* Increased width */
+    max-width: 600px;         /* Desktop width */
     margin: 24px auto;
     padding: 24px 32px 18px 32px;
     border: 2px solid #1976d2;
@@ -1566,4 +1563,109 @@ body.dark-mode footer > p {
     margin-top: 18px;
     letter-spacing: 0.5px;
     text-shadow: 0 1px 6px rgba(0,0,0,0.45); /* Subtle shadow for readability */
+}
+
+/* Responsive: Shrink images and videos on small screens */
+@media (max-width: 700px) {
+    .banner,
+    .popup-image,
+    .chart-container img,
+    .video-transition,
+    .logo {
+        max-width: 98vw !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+    iframe.video-transition {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        height: 220px !important;
+    }
+    /* Petition form container */
+    #sign-petition {
+        max-width: 98vw;
+        padding: 10px 2vw 10px 2vw;
+        margin: 12px auto;
+    }
+    /* Signature boxes container */
+    .signature-container {
+        align-items: center !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    /* Individual signature boxes */
+    .signature-box {
+        width: 95vw !important;
+        max-width: 400px !important;
+        min-width: 0 !important;
+        margin: 0 auto 10px auto !important;
+        padding: 12px 6px !important;
+    }
+}
+
+/* Keep desktop view as is, only shrink on small screens */
+
+/* Petition form container (where users sign) - desktop stays wider */
+#sign-petition {
+    width: 100%;
+    max-width: 600px;         /* Desktop width */
+    margin: 24px auto;
+    padding: 24px 32px 18px 32px;
+    border: 2px solid #1976d2;
+    border-radius: 12px;
+    background-color: #f4faff;
+    box-shadow: 0 4px 18px rgba(77, 147, 209, 0.10);
+}
+
+/* Signature boxes - desktop stays as is */
+.signature-box {
+    background: linear-gradient(135deg, #e3f0ff 0%, #b3e5fc 100%);
+    border: 2px solid #1976d2;
+    border-radius: 10px;
+    padding: 18px;
+    width: 270px;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+    text-align: center;
+    overflow-wrap: break-word;
+    z-index: auto;
+    transition: box-shadow 0.3s, background 0.3s, border-color 0.3s;
+}
+
+/* Responsive: Only shrink on small screens */
+@media (max-width: 700px) {
+    #sign-petition {
+        max-width: 98vw;
+        padding: 10px 2vw 10px 2vw;
+        margin: 12px auto;
+    }
+    .signature-box {
+        width: 95vw !important;
+        max-width: 400px !important;
+        min-width: 0 !important;
+        margin: 0 auto 10px auto !important;
+        padding: 12px 6px !important;
+    }
+}
+
+/* Responsive: Stack and center signature boxes on mobile */
+@media (max-width: 700px) {
+    .signature-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        display: flex !important;
+    }
+    .signature-box {
+        width: 95vw !important;
+        max-width: 400px !important;
+        min-width: 0 !important;
+        margin: 0 auto 10px auto !important;
+        padding: 12px 6px !important;
+    }
 }
