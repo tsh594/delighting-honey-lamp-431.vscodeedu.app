@@ -1,3 +1,215 @@
+/* === Improved Text Colors for Visibility and Appeal === */
+
+/* General text color improvements */
+body {
+    color: #22304a; /* Deeper blue-gray for better contrast */
+}
+
+/* Section titles */
+.section-title,
+h2, h3 {
+    color: #1a237e; /* Deep indigo for strong headings */
+}
+
+/* Paragraphs */
+p, .contact-text, .cta-text, .resource-item p, .news-item p {
+    color: #263238; /* Dark slate for high readability */
+}
+
+/* Links */
+a, .contact-link {
+    color: #1976d2; /* Bright blue for links */
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+a:hover, .contact-link:hover {
+    color: #ff9800; /* Orange accent on hover */
+}
+
+/* Signature section improvements */
+.signature-name {
+    color: #1a237e; /* Deep indigo for names */
+}
+.signature-email {
+    color: #1976d2; /* Bright blue for emails */
+}
+.signature-date {
+    color: #616161; /* Dark gray for dates */
+}
+
+/* Petition form feedback and warning */
+#signatureFeedback,
+.warning {
+    color: #d84315; /* Strong orange-red for warnings/errors */
+    font-weight: bold;
+}
+
+/* Contact section improvements */
+#contact.section-box,
+.contact-visible {
+    max-width: 520px;      /* Slightly wider than before */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    padding: 28px 18px;
+    background: linear-gradient(135deg, #fffbe6 0%, #ffe082 100%);
+    border: 2px solid #ffb300;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(255, 179, 0, 0.10);
+    color: #4e3200;
+}
+#contact .section-title,
+.contact-title {
+    color: #ff9800;
+}
+#contact p,
+.contact-text {
+    color: #4e3200;
+}
+#contact a,
+.contact-link {
+    color: #ffb300; /* Brighter, more visible yellow */
+    font-weight: bold;
+    text-shadow: 0 1px 4px rgba(255, 179, 0, 0.15);
+}
+#contact a:hover,
+.contact-link:hover {
+    color: #ffea00; /* Even brighter yellow on hover */
+    text-shadow: 0 2px 8px rgba(255, 234, 0, 0.18);
+}
+
+/* === Improved Dark Mode for Whole Page === */
+body.dark-mode {
+    background: linear-gradient(135deg, #181c23 0%, #23272f 100%);
+    color: #e0e6f0;
+}
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #23272f;
+    color: #e0e6f0;
+}
+body.dark-mode .section-box,
+body.dark-mode .contact-visible,
+body.dark-mode #contact.section-box {
+    background: linear-gradient(135deg, #23272f 0%, #181c23 100%);
+    border-color: #1976d2;
+    color: #e0e6f0;
+    box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+}
+body.dark-mode .section-title,
+body.dark-mode h2, 
+body.dark-mode h3 {
+    color: #90caf9; /* Light blue for headings */
+}
+body.dark-mode p,
+body.dark-mode .contact-text,
+body.dark-mode .cta-text,
+body.dark-mode .resource-item p,
+body.dark-mode .news-item p {
+    color: #b0bec5; /* Soft blue-gray for text */
+}
+body.dark-mode a,
+body.dark-mode .contact-link {
+    color: #64b5f6; /* Lighter blue for links */
+}
+body.dark-mode a:hover,
+body.dark-mode .contact-link:hover {
+    color: #ffd54f; /* Yellow accent on hover */
+}
+body.dark-mode .signature-name {
+    color: #90caf9;
+}
+body.dark-mode .signature-email {
+    color: #64b5f6;
+}
+body.dark-mode .signature-date {
+    color: #b0bec5;
+}
+body.dark-mode #signatureFeedback,
+body.dark-mode .warning {
+    color: #ff7043;
+}
+body.dark-mode .news-item {
+    background: #263238;
+    border-color: #1976d2;
+    color: #e0e6f0;
+}
+body.dark-mode .resource-item {
+    background: #23272f;
+    border-left: 6px solid #1976d2;
+    color: #e0e6f0;
+}
+body.dark-mode .footer-column h4 {
+    color: #ffd54f;
+}
+body.dark-mode .footer-column p,
+body.dark-mode .footer-column ul {
+    color: #b0bec5;
+}
+body.dark-mode .footer-column ul li a {
+    color: #ffd54f;
+}
+body.dark-mode .footer-column ul li a:hover {
+    color: #fff176;
+}
+body.dark-mode .footer-social-icons a {
+    color: #ffd54f;
+}
+body.dark-mode .footer-social-icons a:hover {
+    color: #fff176;
+}
+body.dark-mode .banner {
+    border: 2px solid #1976d2;
+}
+body.dark-mode .popup,
+body.dark-mode .modal-content {
+    background: #23272f;
+    color: #e0e6f0;
+    border: 2px solid #1976d2;
+}
+body.dark-mode .popup h2,
+body.dark-mode .modal-content h2 {
+    color: #90caf9;
+}
+body.dark-mode .popup p,
+body.dark-mode .modal-content p {
+    color: #b0bec5;
+}
+body.dark-mode .popup button,
+body.dark-mode .modal-content button {
+    background: #1976d2;
+    color: #fff;
+}
+body.dark-mode .popup button:hover,
+body.dark-mode .modal-content button:hover {
+    background: #1565c0;
+}
+body.dark-mode #sign-petition {
+    background: linear-gradient(135deg, #23272f 0%, #181c23 100%);
+    border-color: #1976d2;
+    box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+}
+body.dark-mode #sign-petition input {
+    background: #181c23;
+    color: #e0e6f0;
+    border: 1px solid #444;
+}
+body.dark-mode #sign-petition input:focus {
+    border-color: #1976d2;
+    background: #23272f;
+    color: #fff;
+    box-shadow: 0 0 6px rgba(25, 118, 210, 0.18);
+}
+body.dark-mode #sign-petition button {
+    background-color: #1976d2;
+    color: #fff;
+}
+body.dark-mode #sign-petition button:hover {
+    background-color: #1565c0;
+}
+
 /* Dark Mode Styles */
 body.dark-mode {
     background-color: #121212;
@@ -878,21 +1090,13 @@ body.dark-theme a:hover {
   /* Basic layout for form and buttons */
   #sign-petition {
     width: 100%;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f4f4f4;
-  }
-  
-  #sign-petition input,
-  #sign-petition button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    max-width: 600px;         /* Increased width */
+    margin: 24px auto;
+    padding: 24px 32px 18px 32px;
+    border: 2px solid #1976d2;
+    border-radius: 12px;
+    background-color: #f4faff;
+    box-shadow: 0 4px 18px rgba(77, 147, 209, 0.10);
   }
   
   /* Error styling */
@@ -1217,395 +1421,149 @@ body.dark-theme a:hover {
   
   /* Signature Box */
   .signature-box {
-      background-color: #f9f9f9;
-      border: 2px solid #4D93D1;
-      border-radius: 8px;
-      padding: 15px;
-      width: 250px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, #e3f0ff 0%, #b3e5fc 100%);
+      border: 2px solid #1976d2;
+      border-radius: 10px;
+      padding: 18px;
+      width: 270px;
+      box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
       text-align: center;
       overflow-wrap: break-word;
       z-index: auto;
-      /* Remove animation/transition for static appearance */
-      transition: none;
+      transition: box-shadow 0.3s, background 0.3s, border-color 0.3s;
   }
   
-  .signature-box:hover {
-      /* Remove hover animation */
-      transform: none;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Signature Details */
-  .signature-name {
-      font-size: 1.1rem;
+  .signature-box .signature-name {
+      color: #0d47a1;
+      font-size: 1.15rem;
       font-weight: bold;
-      color: #2C3E50;
       margin-bottom: 6px;
-      word-break: break-word;
   }
   
-  .signature-email {
-      font-size: 0.98rem;
-      color: #007BFF;
-      margin-bottom: 6px;
-      word-break: break-word;
+  .signature-box .signature-email {
+      color: #1976d2;
+      font-size: 1rem;
+      font-weight: 500;
       text-decoration: underline;
+      margin-bottom: 6px;
   }
   
-  .signature-date {
-      font-size: 0.95rem;
-      color: #6B7C93;
+  .signature-box .signature-date {
+      color: #37474f;
+      font-size: 0.98rem;
       margin-bottom: 8px;
   }
   
-  /* Media Query for Smaller Screens */
-  @media (max-width: 768px) {
-      .signature-container {
-          flex-direction: column;
-          align-items: center;
-      }
+  .signature-box .signature-button {
+      background-color: #1976d2;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+  }
+  .signature-box .signature-button:hover {
+      background-color: #0d47a1;
+  }
   
-      .signature-box {
-          width: 90%;
-          max-width: 90%;
-      }
+  /* Dark mode for signature boxes */
+  body.dark-mode .signature-box {
+      background: linear-gradient(135deg, #23272f 0%, #263238 100%);
+      border-color: #64b5f6;
+      box-shadow: 0 4px 16px rgba(100, 181, 246, 0.10);
+  }
+  
+  body.dark-mode .signature-box .signature-name {
+      color: #90caf9;
+  }
+  
+  body.dark-mode .signature-box .signature-email {
+      color: #64b5f6;
+  }
+  
+  body.dark-mode .signature-box .signature-date {
+      color: #ffd54f;
+  }
+  
+  body.dark-mode .signature-box .signature-button {
+      background-color: #1976d2;
+      color: #fff;
+  }
+  body.dark-mode .signature-box .signature-button:hover {
+      background-color: #1565c0;
+  }
+  
+  /* Improve color of the main heading */
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #ff9800; /* Vibrant orange for visibility and appeal */
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(255, 152, 0, 0.08);
   }
 
-/* General Form Styling */
-form {
-    max-width: 500px; /* Limit form width for better readability */
-    margin: 20px auto; /* Center the form */
-    padding: 20px; /* Add padding inside the form */
-    background-color: #f9f9f9; /* Light background for contrast */
-    border: 1px solid #ddd; /* Subtle border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-}
-
-/* Input Fields */
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form textarea {
-    width: 100%; /* Full width for inputs */
-    padding: 10px; /* Add padding for better usability */
-    margin-bottom: 15px; /* Space between inputs */
-    border: 1px solid #ccc; /* Subtle border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Consistent font size */
-    box-sizing: border-box; /* Include padding in width */
-    transition: border-color 0.3s ease; /* Smooth focus effect */
-}
-
-/* Focus State for Inputs */
-form input:focus,
-form textarea:focus {
-    border-color: #4D93D1; /* Highlight border on focus */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 5px rgba(77, 147, 209, 0.5); /* Add subtle glow */
-}
-
-/* Buttons */
-form button {
-    width: 100%; /* Full width for buttons */
-    padding: 12px; /* Add padding for better usability */
-    background-color: #4D93D1; /* Primary button color */
-    color: white; /* White text for contrast */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Consistent font size */
-    cursor: pointer; /* Pointer cursor for buttons */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-/* Hover State for Buttons */
-form button:hover {
-    background-color: #3A7BB5; /* Darker shade on hover */
-}
-
-/* Error Styling */
-form input.error {
-    border-color: red; /* Highlight error fields */
-    background-color: #ffe6e6; /* Light red background for visibility */
-}
-
-.error-tooltip {
-    color: red; /* Red text for error messages */
-    font-size: 0.9rem; /* Slightly smaller font size */
-    margin-top: -10px; /* Adjust spacing */
-    margin-bottom: 10px; /* Space below error message */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    form {
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
-
-    form button {
-        font-size: 0.9rem; /* Adjust button font size */
-    }
-}
-
-/* Dark Mode Styling for Contact Us Section */
-body.dark-mode #contact {
-    background-color: #1e1e1e; /* Dark background for contact section */
-    color: #e0e0e0; /* Light text for readability */
-    padding: 40px 20px; /* Consistent padding */
-    border-radius: 10px; /* Rounded corners for a softer look */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-}
-
-body.dark-mode #contact h2 {
-    color: #f39c12; /* Highlighted heading color */
-    font-size: 1.8rem; /* Adjusted font size for better visibility */
-    margin-bottom: 20px; /* Space below heading */
-}
-
-body.dark-mode #contact p {
-    color: #b0b0b0; /* Softer text color for secondary content */
-    font-size: 1rem; /* Standard font size */
-    line-height: 1.6; /* Comfortable line spacing */
-}
-
-body.dark-mode #contact form input,
-body.dark-mode #contact form textarea {
-    background-color: #333; /* Dark background for inputs */
-    color: #e0e0e0; /* Light text for inputs */
-    border: 1px solid #555; /* Subtle border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px; /* Consistent padding */
-    margin-bottom: 15px; /* Space between inputs */
-    width: 100%; /* Full width for responsiveness */
-    box-sizing: border-box; /* Include padding in width */
-}
-
-body.dark-mode #contact form input:focus,
-body.dark-mode #contact form textarea:focus {
-    border-color: #f39c12; /* Highlight border on focus */
-    outline: none; /* Remove default outline */
-    box-shadow: 0 0 5px rgba(243, 156, 18, 0.5); /* Subtle glow effect */
-}
-
-body.dark-mode #contact form button {
-    background-color: #f39c12; /* Bright button color */
-    color: #1e1e1e; /* Dark text for contrast */
-    border: none; /* Remove default border */
-    padding: 12px; /* Add padding for usability */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Consistent font size */
-    cursor: pointer; /* Pointer cursor for buttons */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-body.dark-mode #contact form button:hover {
-    background-color: #d35400; /* Darker shade on hover */
-}
-
-/* Mobile Responsiveness for Contact Us Section */
-@media (max-width: 768px) {
-    #contact {
-        padding: 20px 10px; /* Adjust padding for smaller screens */
-    }
-
-    #contact h2 {
-        font-size: 1.5rem; /* Adjust heading size for mobile */
-    }
-
-    #contact form {
-        padding: 10px; /* Reduce padding for compact display */
-    }
-
-    #contact form button {
-        font-size: 0.9rem; /* Adjust button font size */
-    }
-}
-
-/* Petition Form Styling */
-#sign-petition {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; /* Space between form elements */
-    max-width: 400px;
-    margin: 0 auto; /* Center the form */
-}
-
-#sign-petition input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-#sign-petition input:focus {
-    border-color: #4D93D1;
-    outline: none;
-    box-shadow: 0 0 5px rgba(77, 147, 209, 0.5);
-}
-
-#sign-petition button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-#sign-petition button:hover {
-    background-color: #0056b3;
-}
-
-/* Popup Styling */
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border: 2px solid #000;
-    border-radius: 10px;
-    padding: 32px 24px 24px 24px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  /* Center the contact section and improve dark mode text color */
+#contact.section-box,
+.contact-visible {
+    max-width: 400px;      /* Smaller width */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     text-align: center;
-    z-index: 10000; /* Ensure popup is above all other elements */
-    animation: fadeIn 1s ease-out;
-    min-width: 320px;
-    max-width: 90vw;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
 }
 
-/* Overlay Styling */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+/* Light mode: keep as is (nice colors) */
+
+/* Dark mode: improve text color for visibility */
+body.dark-mode #contact.section-box,
+body.dark-mode .contact-visible {
+    background: linear-gradient(135deg, #23272f 0%, #181c23 100%);
+    border-color: #1976d2;
+    color: #e0e6f0;
 }
 
-/* Signature Button */
-.signature-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    z-index: auto;
-    width: auto;
-    min-width: 100px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+body.dark-mode #contact .section-title,
+body.dark-mode .contact-title {
+    color: #ffd54f;
 }
 
-.signature-button:hover,
-.signature-button:focus {
-    background-color: #0056b3;
-    outline: none;
+body.dark-mode #contact p,
+body.dark-mode .contact-text {
+    color: #b0bec5; /* Soft blue-gray for high visibility */
 }
 
-/* Signature Box */
-.signature-box {
-    background-color: #f9f9f9;
-    border: 2px solid #4D93D1;
-    border-radius: 8px;
-    padding: 15px;
-    width: 250px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    overflow-wrap: break-word;
-    z-index: auto;
-    /* Remove animation/transition for static appearance */
-    transition: none;
+body.dark-mode #contact a,
+body.dark-mode .contact-link {
+    color: #64b5f6;
 }
 
-.signature-box:hover {
-    /* Remove hover animation */
-    transform: none;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+body.dark-mode #contact a:hover,
+body.dark-mode .contact-link:hover {
+    color: #ffd54f;
 }
 
-/* Signature Details */
-.signature-name {
-    font-size: 1.1rem;
+/* Make the copyright line in the footer more visible in light mode */
+footer > p {
+    color: #222e3a;           /* Deep blue-gray for high contrast on blue */
     font-weight: bold;
-    color: #2C3E50;
-    margin-bottom: 6px;
-    word-break: break-word;
-}
-
-.signature-email {
-    font-size: 0.98rem;
-    color: #007BFF;
-    margin-bottom: 6px;
-    word-break: break-word;
-    text-decoration: underline;
-}
-
-.signature-date {
-    font-size: 0.95rem;
-    color: #6B7C93;
-    margin-bottom: 8px;
-}
-
-/* Improved Contact Section for Light Mode - More Visible Color */
-#contact.section-box {
-    background: linear-gradient(135deg, #fffbe6 0%, #ffe082 100%);
-    border: 2px solid #ffb300;
-    border-radius: 14px;
-    box-shadow: 0 4px 18px rgba(255, 179, 0, 0.10);
-    padding: 36px 28px;
-    margin: 32px auto;
-    max-width: 600px;
-    color: #4e3200;
-    transition: box-shadow 0.3s;
-}
-
-#contact.section-box:hover {
-    box-shadow: 0 8px 32px rgba(255, 179, 0, 0.18);
-}
-
-#contact .section-title {
-    color: #ff9800;
-    font-size: 2rem;
-    margin-bottom: 18px;
+    font-size: 1rem;
     text-align: center;
-    letter-spacing: 1px;
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 4px rgba(255,255,255,0.15); /* Subtle highlight for readability */
 }
 
-#contact p {
-    font-size: 1.08rem;
-    color: #4e3200;
-    margin-bottom: 10px;
+/* Make the copyright line in the footer more visible in dark mode */
+body.dark-mode footer > p {
+    color: #ffd54f;                /* Bright yellow for high contrast */
+    font-weight: bold;
+    font-size: 1rem;
     text-align: center;
-}
-
-#contact a {
-    color: #ff9800;
-    text-decoration: underline;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-
-#contact a:hover {
-    color: #ffb300;
-    text-decoration: none;
+    margin-top: 18px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.45); /* Subtle shadow for readability */
 }
