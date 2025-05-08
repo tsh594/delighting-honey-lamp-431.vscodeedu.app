@@ -1590,6 +1590,7 @@ body.dark-mode footer > p {
         padding: 10px 2vw 10px 2vw;
         margin: 12px auto;
     }
+    
     /* Signature boxes container */
     .signature-container {
         align-items: center !important;
@@ -1638,15 +1639,29 @@ body.dark-mode footer > p {
 @media (max-width: 700px) {
     #sign-petition {
         max-width: 98vw;
-        padding: 10px 2vw 10px 2vw;
+        padding: 10px 6vw 10px 6vw; /* Increased left/right padding for more space */
         margin: 12px auto;
+        box-sizing: border-box;
+
     }
     .signature-box {
-        width: 95vw !important;
-        max-width: 400px !important;
+        width: 75vw !important;
+        max-width: 220px !important;
         min-width: 0 !important;
-        margin: 0 auto 10px auto !important;
-        padding: 12px 6px !important;
+        margin: 0 0 10px 0 !important;
+        padding: 6px 2px !important;
+    }
+    .signature-box .signature-name,
+    .signature-box .signature-email,
+    .signature-box .signature-date {
+        font-size: 0.9rem !important;
+    }
+    .signature-box .signature-button {
+        font-size: 0.9rem !important;
+        padding: 6px 10px !important;
+    }
+    .signature-container {
+        align-items: flex-start !important; /* Align all boxes to the left */
     }
 }
 
@@ -1662,10 +1677,10 @@ body.dark-mode footer > p {
         display: flex !important;
     }
     .signature-box {
-        width: 95vw !important;
-        max-width: 400px !important;
+        width: 75vw !important;
+        max-width: 220px !important;
         min-width: 0 !important;
         margin: 0 auto 10px auto !important;
-        padding: 12px 6px !important;
+        padding: 6px 2px !important;
     }
 }
