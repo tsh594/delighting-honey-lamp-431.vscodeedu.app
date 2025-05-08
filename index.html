@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore and protect the natural wonders of Chincoteague National Wildlife Refuge. Join us to make a difference for wildlife conservation.">
+    <title>Discover Tranquility | ExploreChincoteague.org</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon">
+    <script src="script.js" defer></script> <!-- JavaScript for light/dark mode toggle -->
+</head>
+
+<body>
+<header>
+    <div class="logo-container">
+        <video autoplay loop muted class="logo" aria-label="Chincoteague Logo">
+            <source src="vid/ChB_LOGO.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <img src="img/banner_image.jpg" alt="Discover Tranquility Banner" class="banner fade-in">
+
+    <h1>My Activism Project: Discover Tranquility</h1>
+    <h3>Nurturing Chincoteague's Wild Beauty</h3>
+    <div class="button-group">
+        <button type="button" onclick="window.location.href='https://www.example.com';">
+            ExploreChincoteague.org
+        </button>
+        <button id="getInvolvedButton" onclick="toggleForm()">Get Involved</button>
+    </div>
+    <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Light/Dark Mode</button>
+    <button id="reduceMotionButton" onclick="toggleReduceMotion()">Reduce Motion</button>
+
+    <!-- Petition Form Section -->
+    <section id="petition" class="section-box">
+        <div>
+            <h3 class="section-title" style="text-align: center;">Sign the Petition</h3> <!-- Centered title -->
+            <form id="sign-petition" class="form-container" onsubmit="return validateForm()">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <button type="submit" id="signNowButton" class="primary-button">Sign Now</button>
+                <p id="warningMessage" class="warning" style="display: none;">Please enter a valid name and email address.</p>
+                <p id="signatureFeedback" class="error-tooltip" style="display: none;"></p>
+            </form>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="overlay" id="overlay" style="display:none;"></div>
+        <div class="popup" id="popup" style="display:none;">
+            <img src="img/Chincoteague_Refuge_advocacy_campaign.jpg" alt="Chincoteague National Wildlife Refuge" class="popup-image">
+            <p>Thank you for signing the petition to protect the Chincoteague National Wildlife Refuge!</p>
+            <h2>Thank You, <span id="modalName"></span>!</h2>
+            <button class="primary-button" onclick="closePopup()">Close</button>
+        </div>
+    </section>
+    
+
+    <section id="signaturesSection" class="section-box">
+        <div class="cta-left">
+            <h2>Get Involved and Help Us Protect Chincoteague!</h2>
+            <p>Join our mission to protect and preserve Chincoteague’s natural wonders. Sign the petition, donate, or volunteer to make a difference in the future of this unique wildlife refuge.</p>
+        </div>
+
+        <div class="cta-right">
+            <h3>Signatures</h3>
+            <div id="signaturesList" class="signature-container">
+                <!-- Individual signature boxes will go here -->
+                <div class="signature-box">
+                    <div class="signature-name">John Doe</div>
+                    <div class="signature-date">October 2024</div>
+                    <button class="signature-button">Sign Petition</button>
+                </div>
+                <!-- Additional signature boxes can be added dynamically or statically -->
+                <div class="signature-box">
+                    <div class="signature-name"></div> <!-- Invalid name -->
+                    <div class="signature-email">invalidemail.com</div> <!-- Invalid email -->
+                    <div class="signature-date">October 2024</div>
+                    <button class="signature-button">Sign Petition</button>
+                </div>
+            </div>
+            <p>Total Signatures: <span id="signatureCountDisplay">2</span></p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="cta-section">
+            <p class="cta-text">Your call to action goes here. Encourage visitors to take action now!</p>
+        </div>
+        <div class="signatures">
+            <img src="signature1.png" alt="Signature 1" class="signature">
+            <img src="signature2.png" alt="Signature 2" class="signature">
+            <img src="signature3.png" alt="Signature 3" class="signature">
+        </div>
+    </div>
+
+</header>
+
+<!-- Navigation Bar -->
+<nav id="navbar">
+    <button class="navbar-toggle" onclick="toggleNav()">☰ Menu</button>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="section">
+        <section id="home" class="section-box">
+            <h2 class="section-title">Welcome to Tranquility</h2>
+            <p>At ExploreChincoteague.org, we believe in discovering and nurturing the beauty of Chincoteague's unique wildlife and landscapes. Our mission is to protect and celebrate this serene refuge, ensuring that its natural wonders remain a source of tranquility for generations to come.</p>
+        </section>
+    </section>
+    <section class="section">
+        <section id="about" class="section-box">
+            <h2 class="section-title">About Chincoteague National Wildlife Refuge</h2>
+            <p>The Chincoteague National Wildlife Refuge is a cherished sanctuary known for its diverse wildlife, scenic landscapes, and the iconic Chincoteague ponies. Here, nature thrives in a tranquil setting, where every visit is an opportunity to reconnect with the beauty of the wild.</p>
+        </section>
+    </section>
+    <section class="section">
+        <section id="activities" class="section-box">
+            <h2 class="section-title">Our Activities</h2>
+            <p>This project is dedicated to protecting and exploring the natural wonders of Chincoteague National Wildlife Refuge. Join us in our efforts to conserve and appreciate the beauty of nature.</p>
+            <iframe class="video-transition" width="560" height="315" src="https://www.youtube.com/embed/Pz_XCo9R9M8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </section>
+    </section>
+    do I put this code in main or the body: <!-- New Resources Section -->
+<section class="section">
+    <section id="resources" class="section-box">
+        <h2 class="section-title">Resources</h2>
+        <p>Explore the following resources to learn more about Chincoteague National Wildlife Refuge:</p>
+        <ul>
+            <li><a href="https://www.fws.gov/refuge/chincoteague" target="_blank" rel="noopener noreferrer">Chincoteague National Wildlife Refuge Official Site</a></li>
+            <li><a href="https://www.nps.gov/chic/index.htm" target="_blank" rel="noopener noreferrer">Chincoteague Island: A National Seashore Experience</a></li>
+            <li><a href="https://www.chincoteague.com/" target="_blank" rel="noopener noreferrer">Chincoteague Island Visitor Guide</a></li>
+            <li><a href="https://www.audubon.org/news/what-you-need-know-about-chincoteague-wildlife-refuge" target="_blank" rel="noopener noreferrer">Audubon Society: Chincoteague Wildlife Refuge</a></li>
+            <li><a href="https://dwr.virginia.gov" target="_blank" rel="noopener noreferrer">Virginia Department of Wildlife Resources</a></li>
+            <li><a href="https://chincoteaguefire.org" target="_blank" rel="noopener noreferrer">Chincoteague Volunteer Fire Company</a></li>
+        </ul>
+    </section>
+</section>
+
+<section class="section">
+    <section id="contact" class="section-box">
+        <h2 class="section-title">Contact Us</h2>
+        <p>Connect with us to learn more about how you can help preserve Chincoteague's natural treasures:</p>
+        <p>Email: <a href="mailto:support@explorechincoteague.org">support@explorechincoteague.org</a></p>
+        <p>Phone: <a href="tel:+17575557890">+1-757-555-7890</a></p>
+    </section>
+</section>
+
+<section class="section">
+    <section class="section-box">
+        <h3 class="section-title">Data about my topic</h3>
+        <div class="chart-container">
+            <img src="img/chart.png" alt="Wildlife Population Chart">
+            <h4>Wildlife population trends over the last decade show a concerning decline in some species.</h4>
+            <ul>
+                <li>Less than 15% - Critically endangered species</li>
+                <li>15%-25% - At-risk species</li>
+                <li>25%-35% - Stable species</li>
+                <li>35%-45% - Thriving species</li>
+                <li>More than 45% - Invasive species</li>
+            </ul>
+        </div>
+    </section>
+</section>
+
+<section class="section">
+    <section class="section-box">
+        <h2 class="section-title">Impact!</h2>
+        <div id="interesting">
+            <h3>Where can this problem have lasting effects?</h3>
+            <p>The decline in native species affects local ecosystems, tourism, and the overall health of the environment.</p>
+            <h3>Where else can this problem have lasting effects?</h3>
+            <p>Degradation of the landscape may lead to increased coastal erosion and habitat loss.</p>
+            <h3>Where else can this problem have lasting effects?</h3>
+            <p>Reduced biodiversity can impact food chains, threatening other species that rely on affected populations for survival.</p>
+        </div>
+    </section>
+</section>
+
+<!-- News Section -->
+<section class="section">
+    <section class="news-container">
+        <h2 class="section-title">Recent News</h2>
+        
+        <div class="news-item" id="news-item-0" style="display: none;">
+            <a href="https://www.example-news-1.com" target="_blank" rel="noopener noreferrer">
+                <article>
+                    <h3>Chincoteague's Pony Round-Up 2024: What to Expect</h3>
+                    <p>Excitement builds as the annual pony round-up approaches, with plans for new conservation measures to protect the herd.</p>
+                </article>
+            </a>
+        </div>
+        <button class="news-button" onclick="toggleNews(0)">Toggle News Item 1</button>
+
+        <div class="news-item" id="news-item-1" style="display: none;">
+            <a href="https://www.example-news-2.com" target="_blank" rel="noopener noreferrer">
+                <article>
+                    <h3>Coastal Erosion Threatens Chincoteague Wildlife Refuge</h3>
+                    <p>Recent studies show alarming rates of coastal erosion, prompting calls for increased funding and protective measures.</p>
+                </article>
+            </a>
+        </div>
+        <button class="news-button" onclick="toggleNews(1)">Toggle News Item 2</button>
+
+        <div class="news-item" id="news-item-2" style="display: none;">
+            <a href="https://www.example-news-3.com" target="_blank" rel="noopener noreferrer">
+                <article>
+                    <h3>Efforts to Reintroduce Native Species Gain Momentum</h3>
+                    <p>Conservationists are working tirelessly to bring back native species to Chincoteague, reversing decades of decline.</p>
+                </article>
+            </a>
+        </div>
+        <button class="news-button" onclick="toggleNews(2)">Toggle News Item 3</button>
+    </section>
+</section>
+
+
+
+</main>
+<!-- Footer -->
+<section class="section">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Stay Connected</h4>
+                <p>Follow us on social media for the latest updates:</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/chincoteague" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://twitter.com/chincoteague" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/chincoteague" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Email: <a href="mailto:support@explorechincoteague.org">support@explorechincoteague.org</a></p>
+                <p>Phone: <a href="tel:+17575557890">+1-757-555-7890</a></p>
+            </div>
+        </div>
+        <p>&copy; 2024 Explore Chincoteague. All rights reserved.</p>
+    </footer>
+</section>
+
+<!-- Back to Top Button -->
+<button id="backToTop" style="display:none;">Back to Top</button>
+</body>
+
+</html>
