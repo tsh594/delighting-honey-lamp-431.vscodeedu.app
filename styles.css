@@ -1089,11 +1089,12 @@ body.dark-theme a:hover {
     width: 100%;
     max-width: 600px;         /* Desktop width */
     margin: 24px auto;
-    padding: 24px 32px 18px 32px;
+    padding: 24px 48px 18px 48px; /* Increased left/right padding */
     border: 2px solid #1976d2;
     border-radius: 12px;
     background-color: #f4faff;
     box-shadow: 0 4px 18px rgba(77, 147, 209, 0.10);
+    box-sizing: border-box;
   }
   
   /* Error styling */
@@ -1587,8 +1588,10 @@ body.dark-mode footer > p {
     /* Petition form container */
     #sign-petition {
         max-width: 98vw;
-        padding: 10px 2vw 10px 2vw;
+        padding: 10px 8vw 10px 8vw; /* More left/right padding on mobile */
         margin: 12px auto;
+        box-sizing: border-box;
+
     }
     
     /* Signature boxes container */
@@ -1599,7 +1602,10 @@ body.dark-mode footer > p {
     }
     /* Individual signature boxes */
     .signature-box {
-        width: 95vw !important;
+        background: linear-gradient(135deg, #e3f0ff 0%, #b3e5fc 100%);
+        border: 2px solid #1976d2;
+        border-radius: 10px;
+        padding: 12px 6px !important;
         max-width: 400px !important;
         min-width: 0 !important;
         margin: 0 auto 10px auto !important;
@@ -1614,7 +1620,7 @@ body.dark-mode footer > p {
     width: 100%;
     max-width: 600px;         /* Desktop width */
     margin: 24px auto;
-    padding: 24px 32px 18px 32px;
+    padding: 24px 48px 18px 48px; /* Increased left/right padding */
     border: 2px solid #1976d2;
     border-radius: 12px;
     background-color: #f4faff;
@@ -1639,10 +1645,9 @@ body.dark-mode footer > p {
 @media (max-width: 700px) {
     #sign-petition {
         max-width: 98vw;
-        padding: 10px 6vw 10px 6vw; /* Increased left/right padding for more space */
+        padding: 10px 8vw 10px 8vw; /* More left/right padding on mobile */
         margin: 12px auto;
         box-sizing: border-box;
-
     }
     .signature-box {
         width: 75vw !important;
